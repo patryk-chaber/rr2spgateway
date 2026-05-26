@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Python virtual environment (venv in project root)
+pyvenv.cfg
+/bin/
+/lib/
+/include/
+/share/
+
+# CSV data files
+# To track scan lists in the future, create a dedicated directory (e.g. scan_lists/)
+# and add a .gitkeep inside it, then remove the *.csv rule or narrow it.
+*.csv
+
+# Raw data and dumps
+*.dump
+/data_dump
+/data/
+
+# Timestamped output files
+20??????_??????_*.csv
+
+# Logs
+/logs/
+/mqtt_logs/
+
+# Backup files
+*_backup.py
+
+# Editor / tool settings
+.vscode/
+.claude/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+*.egg-info/

@@ -1,0 +1,37 @@
+input:
+  type: slmp
+  slmp:
+    ip: 127.0.0.1
+    port: 30000
+    number_of_bytes: 4
+  modbus_tcp: # NOT USED FOR NOW
+    ip: 192.168.200.99
+    port: 502
+    unit_id: 1
+
+output:
+  type: mqtt
+  mqtt:
+    ip: 127.0.0.1
+    port: 1883
+    username: gateway_user
+    password: gateway
+    prefix: gateway
+    keepalive_s: 60
+  ros2: # NOT USED FOR NOW
+    node_name: plc_gateway
+    topic_prefix: /gateway
+
+gateway:
+  scan_list: scan_list.csv
+  status_refresh_ms: 100
+  stats_refresh_ms: 60000
+  scan_jitter_ms: 100
+  stats_window: 1000
+  register_stats_window: 10
+  buffer_size: 1000000
+  max_tries: 3
+  socket_timeout_s: 1.0
+
+logging:
+  level: INFO

@@ -1,0 +1,22 @@
+user gateway_user
+topic write gateway/separate/#
+topic write gateway/status
+topic write gateway/status/#
+topic read gateway/command
+
+# Basic subscribers - read data only
+user basic_user
+topic read gateway/separate/#
+topic read gateway/status
+topic read gateway/status/#
+
+# Scheduler - reads data and sends commands to the gateway
+user scheduler_user
+topic read gateway/separate/#
+topic read gateway/status
+topic read gateway/status/#
+topic write gateway/command
+
+# Admin - full access including management commands
+user admin_user
+topic readwrite #

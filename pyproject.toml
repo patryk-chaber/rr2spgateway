@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rr2spgateway"
+version = "0.1.0"
+description = "SLMP-to-MQTT gateway for Mitsubishi PLCs"
+requires-python = ">=3.10"
+dependencies = [
+    "paho-mqtt>=2.0",
+    "PyYAML",
+]
+
+[tool.setuptools]
+py-modules = ["slmp", "scan_list", "config_loader"]
